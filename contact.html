@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- hier zet je de code in de head tags -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <title>Contact</title>
+</head>
+
+<body>
+  <!-- hier zet je de code in de body tags-->
+  <div class="container">
+    <div class="nav">
+      <nav class="navbar">
+        <div class="navbarlink" style="flex-grow: 1">
+          <h2><a href="index.html">Home</a></h2>
+        </div>
+        <div class="navbarlink" style="flex-grow: 2">
+          <h2><a href="Boten.html">Botenoverzicht</a></h2>
+        </div>
+        <div class="navbarlink" style="flex-grow: 2">
+          <h2><a href="scheepslog.html">Scheepslogboek</a></h2>
+        </div>
+        <div class="navbarlink" style="flex-grow: 1">
+          <h2><a href="contact.html">Contact</a></h2>
+        </div>
+      </nav>
+    </div>
+    <div class="content">
+      <header>
+        <h1>Contact opnemen en scheepslog delen</h1>
+      </header>
+      <main>
+        <p>Heb je een vraag of wil je jouw vaaravontuur graag delen? Vul dan onderstaand formulier in.</p>
+        <form name="contact" method="POST" data-netlify="true">
+          <div>
+            <label for="naam">Naam: </label>
+            <input type="text" name="naam" id="naam" required />
+          </div>
+          <div>
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div>
+            <label for="telefoon">Telefoon: </label>
+            <input type="tel" name="telefoon" id="telefoon" />
+          </div>
+          <div>
+            <label for="leeftijd">Leeftijd: </label>
+            <input type="number" name="leeftijd" id="leeftijd" min="1" max="130" />
+          </div>
+          <hr>
+          <div>
+            <label for="locatie">Locatie vaartocht: </label>
+            <input type="text" name="locatie" id="locatie" />
+          </div>
+          <div>
+            <label for="datum">Datum scheepslog: </label>
+            <input type="datum" name="datum" id="datum" />
+          </div>
+          <div>
+            <label for="avontuur">Je vraag en/of de beschrijving van je vaaravontuur:</label><br>
+            <textarea id="avontuur" name="avontuur" rows="10" cols="60"></textarea>
+          </div>
+          <div>
+            <label for="foto">Fotobestand insturen:</label>
+            <input id="foto" type="file" name="foto" />
+          </div>
+          <hr>
+          <div>
+            Weersomstandigheden:
+            <div>
+              <label for="zonnig">Zonnig</label>
+              <input type="radio" name="weertype" id="zonnig" value="zonnig" />
+            </div>
+            <div>
+              <label for="bewolkt">Bewolkt</label>
+              <input type="radio" name="weertype" id="bewolkt" value="bewolkt" />
+            </div>
+            <div>
+              <label for="halfbewolkt">Half bewolkt</label>
+              <input type="radio" name="weertype" id="halfbewolkt" value="halfbewolkt" />
+            </div>
+            <div>
+              <label for="regen">Regen</label>
+              <input type="radio" name="weertype" id="regen" value="regen" />
+            </div>
+          </div>
+          <div>
+            <label for="temperatuur">Temperatuur in graden celsius:</label>
+            <input type="number" name="temperatuur" id="temperatuur" />
+          </div>
+          <div>
+            <label for="windkracht">Windkracht (beaufort):</label>
+            <input type="number" name="windkracht" id="windkracht" min="0" />
+          </div>
+          <div>
+            <label for="windrichting">Windrichting:</label>
+            <input type="text" name="windrichting" id="windrichting" />
+          </div>
+          <hr>
+          <div>
+            Inschrijven voor onze nieuwsbrief?
+            <div>
+              <label for="nieuwsbrief">Ja, graag!</label>
+              <input type="checkbox" name="nieuwsbrief" id="nieuwsbrief" />
+            </div>
+          </div>
+          <button type="reset">Formulier wissen</button>
+          <button type="submit">Verzenden</button>
+        </form>
+
+      </main>
+    </div>
+    <div class="widget-area"><a class="weatherwidget-io" href="https://forecast7.com/nl/40d71n74d01/new-york/"
+        data-label_1="Amsterdam" data-label_2="Weer" data-theme="original">Amsterdam Weer</a>
+      <script>
+        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+      </script>
+    </div>
+    <div class="footer">
+      <footer>
+        Copyright: Studio Frederiqi (teksten en fotomateriaal)
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>
